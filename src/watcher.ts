@@ -185,6 +185,10 @@ export async function commit(repository: Repository, message?: string) {
     }
   }
 
+  if (config.autoPull === "preCommit") {
+    await pullRepository(repository);
+  }
+
   await repository.commit(commitMessage, { all: true, noVerify: config.noVerify });
 
   delete process.env.GIT_AUTHOR_DATE;

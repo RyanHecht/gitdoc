@@ -6,12 +6,6 @@ import { getGitApi, GitAPI, RefType } from "./git";
 import { store } from "./store";
 import { commit, watchForChanges, ensureStatusBarItem, updateStatusBarItem } from "./watcher";
 import { updateContext } from "./utils";
-import * as minimatch from "minimatch";
-
-// Helper function for file pattern matching
-function matches(uri: vscode.Uri) {
-  return minimatch(uri.path, config.filePattern, { dot: true });
-}
 
 export async function activate(context: vscode.ExtensionContext) {
   // Wait for Git extension to be ready

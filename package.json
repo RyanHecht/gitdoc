@@ -4,7 +4,7 @@
   "publisher": "vsls-contrib",
   "icon": "images/icon.png",
   "description": "Automatically commit/push/pull changes on save, so you can edit a Git repo like a multi-file, versioned document.",
-  "version": "0.2.3",
+  "version": "0.2.3-ryan",
   "extensionKind": [
     "workspace"
   ],
@@ -72,7 +72,8 @@
             "afterDelay",
             "onCommit",
             "onPush",
-            "off"
+            "off",
+            "preCommit"
           ],
           "default": "onPush",
           "description": "Specifies whether to automatically pull changes from the current remote."

@@ -3,7 +3,7 @@ import * as vscode from "vscode";
 const DEFAULT_DELAY_MS = 30000;
 const ENABLED_KEY = "enabled";
 
-export type AutoPull = AutoPush | "onPush";
+export type AutoPull = AutoPush | "onPush" | "preCommit";
 export type AutoPush = "onCommit" | "afterDelay" | "off";
 export type CommitValidationLevel = "error" | "warning" | "none";
 export type PushMode = "forcePush" | "forcePushWithLease" | "push";
